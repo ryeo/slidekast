@@ -1,0 +1,16 @@
+<body>
+<div id="login">{{loginButtons}}</div>
+{{>reveal}}
+</body>
+
+<template name='reveal'>
+    <div class='reveal'>
+        {{>slides}}
+    </div>
+</template>
+
+<template name='slides'>
+    <div class='slides'>
+        {{#each slide}}<section>{{{html}}} </section>{{/each}}
+    </div>
+</template>
