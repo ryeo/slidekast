@@ -21,7 +21,7 @@ if (Meteor.isClient) {
                 //event.previousSlide, event.currentSlide, event.indexh, event.indexv
                 if (Meteor.user()){
                     //replace id with your id.. find it out on the  browser console with slidekastDB.find().fetch()
-                    slidekastDB.update({_id:"2chP2tx9EZBLTzrgC"},{current_slide:event.indexh})
+                    slidekastDB.update({_id:"ymKNnwwMfTzz4WAuq"},{current_slide:event.indexh})
                 }
             })
         })
@@ -31,7 +31,7 @@ if (Meteor.isClient) {
     })
 
     //When current slide is changed in DB, propagate changes to all connected clients
-    slidekastDB.find({_id:"2chP2tx9EZBLTzrgC"}).observeChanges({changed: function(id,fields){
+    slidekastDB.find({_id:"ymKNnwwMfTzz4WAuq"}).observeChanges({changed: function(id,fields){
 
         Reveal.slide(fields.current_slide)
 
@@ -44,7 +44,7 @@ if (Meteor.isClient) {
         var slide1 = {html:'<h3>Realtime Slides with Meteor and Reveal JS</h3>'};
         var slide2 = {html:'<img src="http://www.dougclarkonline.com/wp-content/uploads/2012/08/meteorjs.jpeg"> <h3>Real Time Web Framework</h3>'};
         var slide3 = {html:'<img src= "http://s3.amazonaws.com/hakim-static/portfolio/images/rvl-js.jpg"><h3>Html Presentation Framework</h3> '};
-        var slide4 = {html:'<img src="http://www.popsci.com/files/imagecache/article_image_large/articles/meteor.jpg"><div>@elvyscruz</div>'};
+        var slide4 = {html:'<img src="http://2012apocalypse.net/sitebuildercontent/sitebuilderpictures/.pond/meteor.jpg.w300h247.jpg"><div>@elvyscruz</div>'};
         Data.push(slide1,slide2,slide3,slide4);
 
         return Data;

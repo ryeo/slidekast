@@ -4,13 +4,15 @@
 </body>
 
 <template name='reveal'>
+    <!--Keyword Reveal - activates reveal.js-->
     <div class='reveal'>
         {{>slides}}
     </div>
 </template>
 
 <template name='slides'>
+    <!--Keyword slides-->
     <div class='slides'>
-        {{#each slide}}<section>{{{html}}} </section>{{/each}}
+        {{#each slide}}<section>{{{html}} </section>{{/each}}
     </div>
 </template>
